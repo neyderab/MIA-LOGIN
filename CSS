@@ -1,0 +1,397 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+
+  font-family: 'Inter', sans-serif;
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0F172A,
+      #1E293B
+    );
+
+  overflow: hidden;
+}
+
+
+
+.background-glow{
+
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(16,185,129,0.25),
+      transparent 70%
+    );
+
+  top: -200px;
+  left: -200px;
+
+  z-index: 0;
+
+  animation: pulse 8s infinite;
+}
+
+
+.login-section{
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+
+  position: relative;
+}
+
+
+
+.login-container{
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 40px;
+
+  align-items: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.login-info{
+
+  color: white;
+}
+
+.mia-badge{
+
+  display: inline-block;
+
+  background:
+    linear-gradient(
+      135deg,
+      #10B981,
+      #06B6D4
+    );
+
+  padding: 10px 18px;
+
+  border-radius: 40px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.login-info h1{
+
+  font-size: 4rem;
+
+  line-height: 1.1;
+
+  margin-bottom: 25px;
+}
+
+.login-info p{
+
+  color:
+    rgba(255,255,255,0.75);
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+}
+
+
+
+.features{
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.feature-item{
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-weight: 500;
+}
+
+.feature-item i{
+
+  color: #10B981;
+
+  font-size: 1.2rem;
+}
+
+
+.login-card{
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(20px);
+
+  padding: 45px;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 50px rgba(0,0,0,0.25);
+}
+
+
+
+.card-header{
+
+  margin-bottom: 35px;
+}
+
+.card-header h2{
+
+  color: white;
+
+  font-size: 2rem;
+
+  margin-bottom: 10px;
+}
+
+.card-header p{
+
+  color:
+    rgba(255,255,255,0.65);
+}
+
+
+.input-group{
+
+  margin-bottom: 22px;
+}
+
+.input-group label{
+
+  display: block;
+
+  color: white;
+
+  margin-bottom: 10px;
+
+  font-size: 0.95rem;
+
+  font-weight: 500;
+}
+
+.input-box{
+
+  display: flex;
+
+  align-items: center;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius: 16px;
+
+  padding: 0 18px;
+
+  transition: 0.3s ease;
+}
+
+.input-box:focus-within{
+
+  border-color: #10B981;
+
+  box-shadow:
+    0 0 15px rgba(16,185,129,0.25);
+}
+
+.input-box i{
+
+  color:
+    rgba(255,255,255,0.6);
+
+  margin-right: 12px;
+}
+
+.input-box input{
+
+  width: 100%;
+
+  padding: 16px 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 1rem;
+}
+
+.input-box input::placeholder{
+
+  color:
+    rgba(255,255,255,0.45);
+}
+
+.register-btn{
+
+  width: 100%;
+
+  border: none;
+
+  padding: 16px;
+
+  border-radius: 18px;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  color: white;
+
+  cursor: pointer;
+
+  margin-top: 10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #10B981,
+      #06B6D4
+    );
+
+  transition: 0.35s ease;
+}
+
+.register-btn:hover{
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 35px rgba(16,185,129,0.35);
+}
+
+
+
+.bottom-text{
+
+  margin-top: 25px;
+
+  text-align: center;
+
+  color:
+    rgba(255,255,255,0.65);
+}
+
+.bottom-text a{
+
+  color: #10B981;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+
+
+@keyframes pulse{
+
+  0%{
+    transform: scale(1);
+  }
+
+  50%{
+    transform: scale(1.1);
+  }
+
+  100%{
+    transform: scale(1);
+  }
+}
+
+
+@media(max-width: 992px){
+
+  .login-container{
+
+    grid-template-columns: 1fr;
+  }
+
+  .login-info{
+
+    text-align: center;
+  }
+
+  .features{
+
+    align-items: center;
+  }
+
+  .login-info h1{
+
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 768px){
+
+  .login-section{
+
+    padding: 20px;
+  }
+
+  .login-card{
+
+    padding: 30px;
+  }
+
+  .login-info h1{
+
+    font-size: 2.3rem;
+  }
+}
